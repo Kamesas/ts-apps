@@ -3,6 +3,7 @@ import "./App.scss";
 import { Switch, BrowserRouter, Route } from "react-router-dom";
 import Header from "./components/_common/Header/Header";
 
+const Calculator = lazy(() => import("./pages/CalculatorPage"));
 const Auth = lazy(() => import("./pages/Auth"));
 const Main = lazy(() => import("./pages/Main"));
 
@@ -13,6 +14,9 @@ function App() {
         <Header />
         <Suspense fallback={null}>
           <Switch>
+            <Route path="/calculator">
+              <Calculator />
+            </Route>
             <Route path="/auth">
               <Auth />
             </Route>

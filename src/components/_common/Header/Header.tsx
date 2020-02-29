@@ -10,10 +10,10 @@ const Header = () => {
   };
   return (
     <div className="Header">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a className="navbar-brand" href="/">
-          Navbar
-        </a>
+      <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+        <NavLink className="navbar-brand" to="/">
+          Kamesas
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
