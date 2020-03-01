@@ -1,7 +1,7 @@
 import React from "react";
 import Simplecalculator from "../components/SimpleCalculator/SimpleCalculator";
 
-const Calculatorpage = () => {
+const CalculatorPage = () => {
   return (
     <div className="Calculatorpage">
       <Simplecalculator />
@@ -9,4 +9,4 @@ const Calculatorpage = () => {
   );
 };
 
-export default Calculatorpage;
+export default CalculatorPage;
