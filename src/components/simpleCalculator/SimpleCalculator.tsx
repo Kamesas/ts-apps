@@ -95,7 +95,7 @@ const Simplecalculator = () => {
   };
 
   return (
-    <div className="Simplecalculator container">
+    <div className="Simplecalculator container mt-5">
       <CalculatorInput
         inputValue={inputValue}
         onInputHandler={onInputHandler}
