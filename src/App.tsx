@@ -9,7 +9,7 @@ const Main = lazy(() => import("./pages/Main"));
 
 function App() {
   return (
-    <div className="App container">
+    <div className="App">
       <BrowserRouter>
         <Header />
         <Suspense fallback={null}>
