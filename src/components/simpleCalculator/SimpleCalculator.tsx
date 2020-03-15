@@ -94,6 +94,10 @@ const Simplecalculator = () => {
     }
   };
 
+  const onDblclick = (e: React.SyntheticEvent) => {
+    console.log(e);
+  };
+
   return (
     <div className="Simplecalculator container mt-5">
       <CalculatorInput
@@ -116,6 +120,7 @@ const Simplecalculator = () => {
                       onClick={() =>
                         setInputValue(inputValue + button.toString())
                       }
+                      onDoubleClick={e => onDblclick(e)}
                     >
                       {button}
                     </button>
