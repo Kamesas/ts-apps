@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { OPERATORS, DIGIT_BUTTONS, ADDITIONAL_OPERATORS } from "./model";
 import CalculatorInput from "./CalculatorInput";
 
-const Simplecalculator = () => {
+const SimpleCalculator = () => {
   const [inputValue, setInputValue] = useState<string>("");
   const [prevValue, setPrevValue] = useState<string>("");
   const [operator, setOperator] = useState<string>("");
@@ -94,12 +94,8 @@ const Simplecalculator = () => {
     }
   };
 
-  const onDblclick = (e: React.SyntheticEvent) => {
-    console.log(e);
-  };
-
   return (
-    <div className="Simplecalculator container mt-5">
+    <div className="SimpleCalculator container mt-5">
       <CalculatorInput
         inputValue={inputValue}
         onInputHandler={onInputHandler}
@@ -107,7 +103,7 @@ const Simplecalculator = () => {
         submitHandler={submitHandler}
       />
 
-      <div className="row">
+      <div className="row" style={{ touchAction: "manipulation" }}>
         <div className="col-12 col-md-9 col-lg-6 mx-auto d-flex flex-wrap px-0">
           <div className="row">
             <div className="col-9 d-flex flex-wrap pr-2">
@@ -120,7 +116,6 @@ const Simplecalculator = () => {
                       onClick={() =>
                         setInputValue(inputValue + button.toString())
                       }
-                      onDoubleClick={e => onDblclick(e)}
                     >
                       {button}
                     </button>
@@ -167,4 +162,4 @@ const Simplecalculator = () => {
   );
 };
 
-export default Simplecalculator;
+export default SimpleCalculator;
