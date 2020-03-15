@@ -39,6 +39,7 @@ const Header = () => {
                     activeClassName="active"
                     to={link.link}
                     exact={link.exact}
+                    onClick={() => setShowMenu(false)}
                   >
                     {link.title}
                   </NavLink>
