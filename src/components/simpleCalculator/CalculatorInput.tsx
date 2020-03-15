@@ -21,7 +21,6 @@ const CalculatorInput: React.FC<ICalculatorInputTypes> = ({
           type="number"
           className="form-control"
           id="exampleInputEmail1"
-          placeholder="0"
           aria-describedby="value"
           value={inputValue}
           onChange={e => onInputHandler(e)}
