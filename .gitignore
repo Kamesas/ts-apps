@@ -32,6 +32,9 @@ npm-debug.log
 yarn.lock
 .npmrc
 
+.firebaserc
+firebase.json
+
 .DS_Store
 .idea
 *.iml
