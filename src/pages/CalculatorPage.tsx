@@ -1,12 +1,12 @@
 import React from "react";
-import Simplecalculator from "../components/SimpleCalculator/SimpleCalculator";
+import SimpleCalculator from "../components/simpleCalculator/SimpleCalculator";
 
-const Calculatorpage = () => {
+const CalculatorPage = () => {
   return (
-    <div className="Calculatorpage">
-      <Simplecalculator />
+    <div className="CalculatorPage">
+      <SimpleCalculator />
     </div>
   );
 };
 
-export default Calculatorpage;
+export default CalculatorPage;
