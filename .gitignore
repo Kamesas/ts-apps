@@ -23,6 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 #firebase
+.firebase
 /.vscode
 node_modules
 /coverage
