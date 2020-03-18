@@ -5,26 +5,26 @@ body {
   color: $white;
 }
 
-.navbar-collapse {
-  position: absolute;
-  background: darken($dark, 5%);
-  top: 60px;
-  left: 0;
-  top: 0;
-  right: -16px;
-  z-index: 998;
-  padding: 0 16px;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
+@media screen and (max-width: 768px) {
+  .navbar-collapse {
+    position: fixed;
+    background: darken($dark, 5%);
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 998;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
 
-  .nav-link {
-    text-align: center;
+    .nav-link {
+      text-align: center;
+    }
   }
-}
 
-.navbar-toggler {
-  z-index: 999;
+  .navbar-toggler {
+    z-index: 999;
+  }
 }
