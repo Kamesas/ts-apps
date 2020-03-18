@@ -8,6 +8,7 @@ const Header = () => {
   const menuToggler = () => {
     setShowMenu(!showMenu);
   };
+
   return (
     <div className="Header">
       <nav className="navbar navbar-expand-md navbar-dark bg-dark">
