@@ -1,5 +1,5 @@
 import React from "react";
-import SimpleCalculator from "../components/simpleCalculator/SimpleCalculator";
+import SimpleCalculator from "../components/SimpleCalculator/SimpleCalculator";
 
 const CalculatorPage = () => {
   return (
