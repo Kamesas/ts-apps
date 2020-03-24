@@ -1,6 +1,10 @@
-import { IMovie } from "./interfaces";
+interface IMovies {
+  id: number | string;
+  title: string;
+  [kye: string]: any;
+}
 
-export const moviesData: IMovie[] = [
+export const moviesData: IMovies[] = [
   {
     vote_count: 4592,
     id: 299536,
