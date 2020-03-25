@@ -3,3 +3,8 @@ export interface IMovie {
   title: string;
   [kye: string]: any;
 }
+
+export interface ISortTab {
+  title: string;
+  sortBy: string;
+}
