@@ -42,7 +42,7 @@ export const Movies = () => {
             {Array.isArray(movieList) &&
               movieList.map(movie => {
                 return (
-                  <div key={movie.id} className="col-4">
+                  <div key={movie.id} className="col-4 d-flex">
                     <MovieItem
                       movie={movie}
                       onRemoveMovie={onRemoveMovie}
