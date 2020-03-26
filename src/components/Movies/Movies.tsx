@@ -9,16 +9,23 @@ export const Movies = () => {
     []
   );
   const [sortBy, setSortBy] = useState("popularity");
+  const [page, setPage] = useState(1);
+  const [dataPages, setDataPages] = useState({ totalMovies: 0, totalPages: 0 });
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&sort_by=${sortBy}.desc`
+      `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&sort_by=${sortBy}.desc&page=${page}`
     ).then(res =>
       res.json().then(body => {
+        console.log(body);
+        setDataPages({
+          totalMovies: body.total_results,
+          totalPages: body.total_pages
+        });
         setMovieList(body.results);
       })
     );
-  }, [sortBy]);
+  }, [sortBy, page]);
 
   const onRemoveMovie = (id: string | number) => {
     const newMovieList = movieList.filter(item => item.id !== id);
@@ -51,6 +58,50 @@ export const Movies = () => {
                   </div>
                 );
               })}
+          </div>
+          <div className="p-5 d-flex justify-content-between">
+            <button
+              className="btn btn-outline-primary"
+              onClick={() => setPage(prev => (prev > 1 ? prev - 1 : 1))}
+            >
+              Prev
+            </button>
+            <div>
+              <button
+                className="btn btn-outline-primary mx-1"
+                onClick={() => setPage(prev => prev + 1)}
+              >
+                {page}
+              </button>
+              <button
+                className="btn btn-outline-primary mx-1"
+                onClick={() => setPage(prev => prev + 1)}
+              >
+                {page + 1}
+              </button>
+              <button
+                className="btn btn-outline-primary mx-1"
+                onClick={() => setPage(prev => prev + 2)}
+              >
+                {page + 2}
+              </button>
+              <button
+                className="btn btn-outline-primary mx-1"
+                // onClick={() => setPage(dataPages.totalPages)}
+              >
+                {dataPages.totalPages}
+              </button>
+            </div>
+            <button
+              className="btn btn-outline-primary"
+              onClick={() =>
+                setPage(prev =>
+                  prev < dataPages.totalPages ? prev + 1 : dataPages.totalPages
+                )
+              }
+            >
+              Next
+            </button>
           </div>
         </div>
         <div className="col-3">
